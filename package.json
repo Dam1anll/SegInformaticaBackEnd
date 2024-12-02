@@ -1,0 +1,30 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "main": "server.js",
+    "author": "Damian Lescas - Luigi Vega",
+    "private": true,
+    "scripts": {
+        "test": "jest",
+        "start": "nodemon server.js"
+    },
+    "dependencies": {
+        "axios": "^1.7.2",
+        "bcrypt": "^5.1.0",
+        "core-js": "^3.37.1",
+        "cors": "^2.8.5",
+        "crypto-js": "^4.2.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "express-session": "^1.18.1",
+        "jsonwebtoken": "^9.0.0",
+        "moment-timezone": "^0.5.43",
+        "nodemon": "^3.1.0",
+        "pg": "^8.11.5",
+        "sequelize": "^6.37.3",
+        "supertest": "^7.0.0"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
