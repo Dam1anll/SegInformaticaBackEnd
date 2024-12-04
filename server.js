@@ -44,10 +44,7 @@ app.get("/", (req, res) => {
 
 // Routes
 require("./app/routes/automationRoutes/auth.routes")(app);
-require("./app/routes/automationRoutes/authenticated.routes")(app);
-require("./app/routes/automationRoutes/crud.routes")(app);
 require("./app/routes/automationRoutes/users.routes")(app);
-
 require("./app/routes/automationRoutes/idea.routes")(app);
 
 require("./app/routes/app.routes")(app);

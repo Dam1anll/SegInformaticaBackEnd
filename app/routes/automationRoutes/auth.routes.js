@@ -3,8 +3,8 @@ module.exports = app => {
 
   var router = require("express").Router();
 
+  router.post("/register", auth.registerAuth); // Register
   router.post("/:document", auth.loginAuth); // Login
-  router.post("/register/:document", auth.createAuth); // Register
   router.post("/access-token/:document", auth.accessToken); // Access Token
   router.post("/refresh-token/:document", auth.refreshToken); // Refresh Token
 

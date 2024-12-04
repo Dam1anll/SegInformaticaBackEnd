@@ -8,6 +8,10 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING, // Texto cifrado
             allowNull: false,
         },
+        encryptionKey: {
+            type: Sequelize.STRING, // Clave para descifrar
+            allowNull: false,
+        },
         decryptedText: {
             type: Sequelize.STRING, // Texto descifrado (opcional)
             allowNull: true,
