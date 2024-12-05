@@ -18,7 +18,6 @@ exports.createUser = async (req, res) => {
             email: email,
             password: hashPassword,
             role: role,
-            isActive: true
         });
 
         res.status(201).json({ message: "Usuario registrado correctamente", data: newUser });
@@ -45,7 +44,6 @@ exports.createTeacher = async (req, res) => {
             email: email,
             password: hashPassword,
             role: role,
-            isActive: true
         });
 
         res.status(201).json({ message: "Usuario registrado correctamente", data: newUser });
@@ -57,7 +55,7 @@ exports.createTeacher = async (req, res) => {
 };
 exports.getUsers = async (req, res) => {
     try {
-        const userAttributes = ["id", "name", "email", "role", "isActive", "createdAt", "updatedAt"];
+        const userAttributes = ["id", "name", "email", "password", "role", "createdAt", "updatedAt"];
         const { correo } = req.query;
         const filtros = {};
 
@@ -74,8 +72,8 @@ exports.getUsers = async (req, res) => {
             id: user.id,
             name: user.name,
             email: user.email,
+            password: user.password,
             role: user.role,
-            isActive: user.isActive,
             createdAt: user.createdAt,
             updatedAt: user.updatedAt
         }));
